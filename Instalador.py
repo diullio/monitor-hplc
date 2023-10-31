@@ -8,7 +8,7 @@ $packageInstalled = Get-Module -ListAvailable | Where-Object { $_.Name -eq $pack
 
 if (-not $packageInstalled) {
     Write-Host "Instalando..."
-    & pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org PyQt5 db-sqlite3 pandas numpy unidecode
+    & pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org "G:\\Desenvolvimento Farmacotecnico Neo\\59. Softwares_Farmacotecnico\\Arquivos\\PyQt5-5.15.9-cp37-abi3-win_amd64.whl" db-sqlite3 pandas numpy unidecode
 } else {
     Write-Host "Tudo já está instalado."
 }
