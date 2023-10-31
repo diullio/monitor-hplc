@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import sqlite3
 from datetime import datetime, timedelta
+from traceback import print_tb
 
 import pandas as pd
 from PyQt5.QtWidgets import QMessageBox
@@ -10,8 +11,9 @@ import getpass
 class AppBD:
     def __init__(self):
         print('Bem vindo ao Monitor HPLC-CG')
-    
-        self.diretorio = 'C:\\Users\\diullio.santos\\Documents\\GiT\\monitor-hplc\\System\\monitor_hplc.db'
+
+        ## Trocar diretorio aqui: self.diretorio = 'LUGAR NOVO\\monitor_hplc.db'
+        self.diretorio = 'C:\\Users\\diullio.santos\\Documents\\GiT\\dsdev\\1-hypera\\1-finished\\7-HPLC\\System\\monitor_hplc.db'
 
 
 # TELA 1 e 2- CADASTRAR
@@ -189,10 +191,12 @@ class AppBD:
             registro_existente = cursor.fetchone()
 
             if registro_existente:
-                id, id_projeto, produto, lote = registro_existente[0]
+                id, id_projeto, produto, lote = registro_existente
                 id = int(id)
                 cursor.execute("""
-                    UPDATE controle SET data_fim = ?, justificativa = ? WHERE id = ?
+                    UPDATE controle
+                    SET data_fim = ?, justificativa = ? 
+                    WHERE id = ?
                 """, (data_fim, justificativa, id))
                 conn.commit()
                 message = f"Teste finalizado com sucesso."
