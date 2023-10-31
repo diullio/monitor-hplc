@@ -11,8 +11,7 @@ class AppBD:
     def __init__(self):
         print('Bem vindo ao Monitor HPLC-CG')
     
-        self.diretorio = 'C:\\Users\\diullio.santos\\Documents\\GiT\\dsdev\\1-hypera\\1-finished\\7-HPLC\\System\\monitor_hplc.db'
-        # self.diretorio = '/home/ds/Sistemas/dsdev/1-hypera/1-finished/7-HPLC/monitor_hplc.db'
+        self.diretorio = 'C:\\Users\\diullio.santos\\Documents\\GiT\\monitor-hplc\\System\\monitor_hplc.db'
 
 
 # TELA 1 e 2- CADASTRAR
