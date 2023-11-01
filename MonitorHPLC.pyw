@@ -632,9 +632,9 @@ class App1(QMainWindow, QDialog):
 
     def check_funcionamento(self):
         try:
-            verde = "background-color: rgb(0, 255, 0);"
-            vermelho = "background-color: rgb(255, 0, 0);"
-            amarelo = "background-color: rgb(255, 255, 0);"
+            verde = "background-color: rgb(0, 255, 0);" ##rodando
+            vermelho = "background-color: rgb(255, 0, 0);" ## manutencao
+            amarelo = "background-color: rgb(255, 255, 0);" ##LIVRE
             maquina = ['HPLC-0122', 'HPLC-0123', 'HPLC-0124', 'HPLC-0125']
                  
             for item in maquina:
@@ -643,46 +643,46 @@ class App1(QMainWindow, QDialog):
                 if item == "HPLC-0122":
                     if id is not None:
                         exec(f"self.gui.txt_hplc0122.setText('Manutenção')")
-                        exec(f"self.gui.hplc0122.setStyleSheet('{amarelo}')")
+                        exec(f"self.gui.hplc0122.setStyleSheet('{vermelho}')")
                     elif produto is not None:
                         exec(f"self.gui.txt_hplc0122.setText('{produto}')")
                         exec(f"self.gui.hplc0122.setStyleSheet('{verde}')")
                     else:
                         exec(f"self.gui.txt_hplc0122.setText('')")
-                        exec(f"self.gui.hplc0122.setStyleSheet('{vermelho}')")
+                        exec(f"self.gui.hplc0122.setStyleSheet('{amarelo}')")
 
                 if item == "HPLC-0123":
                     if id is not None:
                         exec(f"self.gui.txt_hplc0123.setText('Manutenção')")
-                        exec(f"self.gui.hplc0123.setStyleSheet('{amarelo}')")
+                        exec(f"self.gui.hplc0123.setStyleSheet('{vermelho}')")
                     elif produto is not None:
                         exec(f"self.gui.txt_hplc0123.setText('{produto}')")
                         exec(f"self.gui.hplc0123.setStyleSheet('{verde}')")
                     else:
                         exec(f"self.gui.txt_hplc0123.setText('')")
-                        exec(f"self.gui.hplc0123.setStyleSheet('{vermelho}')")
+                        exec(f"self.gui.hplc0123.setStyleSheet('{amarelo}')")
 
                 if item == "HPLC-0124":
                     if id is not None:
                         exec(f"self.gui.txt_hplc0124.setText('Manutenção')")
-                        exec(f"self.gui.hplc0124.setStyleSheet('{amarelo}')")
+                        exec(f"self.gui.hplc0124.setStyleSheet('{vermelho}')")
                     elif produto is not None:
                         exec(f"self.gui.txt_hplc0124.setText('{produto}')")
                         exec(f"self.gui.hplc0124.setStyleSheet('{verde}')")
                     else:
                         exec(f"self.gui.txt_hplc0124.setText('')")
-                        exec(f"self.gui.hplc0124.setStyleSheet('{vermelho}')")
+                        exec(f"self.gui.hplc0124.setStyleSheet('{amarelo}')")
                     
                 if item == "HPLC-0125":
                     if id is not None:
                         exec(f"self.gui.txt_hplc0125.setText('Manutenção')")
-                        exec(f"self.gui.hplc0125.setStyleSheet('{amarelo}')")
+                        exec(f"self.gui.hplc0125.setStyleSheet('{vermelho}')")
                     elif produto is not None:
                         exec(f"self.gui.txt_hplc0125.setText('{produto}')")
                         exec(f"self.gui.hplc0125.setStyleSheet('{verde}')")
                     else:
                         exec(f"self.gui.txt_hplc0125.setText('')")
-                        exec(f"self.gui.hplc0125.setStyleSheet('{vermelho}')")
+                        exec(f"self.gui.hplc0125.setStyleSheet('{amarelo}')")
 
         except Exception as e:
             print(f"Ocorreu uma exceção: {e}") 

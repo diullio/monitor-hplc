@@ -7,7 +7,6 @@ import pandas as pd
 from PyQt5.QtWidgets import QMessageBox
 import getpass
 
-
 class AppBD:
     def __init__(self):
         print('Bem vindo ao Monitor HPLC-CG')
